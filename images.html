@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider-sec{
+            width: 600px;
+            height: 400px;
+            position: relative;
+            left: 430px;
+            top: 100px;
+        }
+        .slider-sec p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slider-sec p a{
+            /* text-decoration: none; */
+            color: #193725;
+        }
+        .visible{
+            display: block;
+        }
+        .hidden{
+            display: none;
+        }
+        img{
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-sec">
+        <img src="badimalikapatan.jpg" id="img1" class="visible">
+        <img src="Badimalika-Temple.jpg" id="img2" class="hidden">
+        <img src="badimalikatrek.jpg" id="img3" class="hidden">
+        <img src="DonkeysTribenipatan.jpg" id="img4" class="hidden">
+        <img src="Horses-Tribenipatan.jpg" id="img5" class="hidden">
+        <img src="morning-Tribenipatan.jpg" id="img6" class="hidden">
+        <img src="Tribenipatan-Kalikot.jpg" id="img7" class="hidden">
+        <img src="Tribenipatan.jpg" id="img8" class="hidden">
+        <p>Images sources: <a href="https://nepal8thwonder.com/badimalika-tribenipatan-an-epic-adventure-journey-to-west-nepal/">Nepal 8th wonder</a></p>
+    </div>
+    <script>
+        var activeimage=1;
+        var nextimage=1;
+        setInterval(function(){
+            nextimage = nextimage +1;
+            if(nextimage<8){
+                document.getElementById("img"+activeimage).classList.replace("visible","hidden");
+                document.getElementById("img"+nextimage).classList.replace("hidden","visible");
+                activeimage=nextimage;
+            }
+            else{
+                document.getElementById("img"+activeimage).classList.replace("visible","hidden");
+                document.getElementById("img"+nextimage).classList.replace("hidden","visible");
+                activeimage=8;
+                nextimage=0;
+            }
+        },1000)
+    </script>
+</body>
+</html>

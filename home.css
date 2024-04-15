@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.topbar{
+    height: 60vh;
+    width: 100%;
+    background-image: url("badimalikaa.jpg_large");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+}
+.randomtext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.randomtext p{
+    height: 50vh;
+    width: 390px;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2.2rem;
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    top: 4rem;
+    color: whitesmoke;
+    /* background-color: #3F4531; */
+    border-radius: 20px;
+    /* filter: blur(1px); */
+}
+.recommendation ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.recommendation img{
+    border-radius: 15px;
+}
+.recommendation p{
+    color: #193725;
+    font-size: 1.1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    top: 5rem;
+}
+.recommendation ul li{
+    margin: 20px;
+    padding: 1rem;
+    list-style-type: none;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>circular navbar</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" />
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="menu_wrapper" onclick="audio.play();">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <ul class="menu-boxes">
+            <li class="menu_item color_1">
+                <a href="home.html"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li class="menu_item color_2">
+                <a href="images.html"><i class="fa-solid fa-camera"></i></a>
+            </li>
+            <li class="menu_item color_3">
+                <a href="#"><i class="fa-solid fa-location-dot"></i></i></i></a>
+            </li>
+            <li class="menu_item color_4">
+                <a href="#"><i class="fa-solid fa-clock"></i></i></a>
+            </li>
+            <li class="menu_item color_5">
+                <a href="#"><i class="fa-solid fa-gear"></i></i></a>
+            </li>
+        </ul>
+    </div>
+    <div class="text">
+        Explore Spellbinding Badimalika with us!
+    </div>
+    <div class="explorebtn">
+        <button type="button"><a href="home.html">Explore</a></button>
+    </div>
+    <script>
+        //click sound
+        const audio = new Audio();
+        audio.src = "./sound.mp3";
+
+        //animation popup
+        const wrapper = document.querySelector(".menu_wrapper")
+        wrapper.addEventListener("click", () => {
+            wrapper.classList.toggle("active");
+        })
+
+
+        //dragable nav
+
+        const navDrag = document.querySelector(".nav");
+        let moveContainer = false;
+        let offsetX, offsetY;
+
+        navDrag.addEventListener("mousedown", (e) => {
+            moveContainer = true;
+            offsetX = e.clientX - navDrag.getBoundingClientRect().left;
+            offsetY = e.clientY - navDrag.getBoundingClientRect().top;
+        });
+
+        window.addEventListener("mousemove", (e) => {
+            if (moveContainer) {
+                let posX = e.clientX - offsetX;
+                let posY = e.clientY - offsetY;
+
+                // Limit the movement within the window boundaries
+                if (posX > 0 && posX < window.innerWidth - navDrag.offsetWidth) {
+                    navDrag.style.left = posX + "px";
+                }
+                if (posY > 0 && posY < window.innerHeight - navDrag.offsetHeight) {
+                    navDrag.style.top = posY + "px";
+                }
+            }
+        });
+
+        window.addEventListener("mouseup", () => {
+            moveContainer = false;
+        });
+
+    </script>
+</body>
+
+</html>
