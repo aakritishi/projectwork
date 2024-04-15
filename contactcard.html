@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My contact card</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        background-color: #171717;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .back{
+        width: 100vw;
+        height: 20vh;
+        background-color:#193725;
+        position: absolute;
+        top: 0;
+    }
+    .card{
+        width: 24vw;
+        height: 82vh;
+        background-color: rgba(255, 255, 255, 0.107);
+        border: 2px solid white;
+        z-index: 1;
+        border-radius: 30px;
+        backdrop-filter: blur(5px);
+        color: white;
+    }
+    .card .img{
+        width: 8rem;
+        height: 8rem;
+        background: url("me.jpg") no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        margin: auto;
+        position: relative;
+        top: 1.5rem;
+        cursor: pointer;
+        transition: all ease-out 3s;
+    }
+
+    .card:hover{
+        scale: 1.1;
+    }
+
+    .name{
+        font-size: 2rem;
+        width: fit-content;
+        margin: auto;
+        margin-top: 1.5rem;
+    }
+    .moredetail{
+        width: 80%;
+        font-size: 1rem;
+        margin: 2rem auto;
+        text-align: center;
+        word-spacing: 1px;
+        letter-spacing: 0.5px;
+    }
+    .socialmedia{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .facebook:hover{
+        cursor: pointer;
+        scale: 1.1;
+        color: rgb(48, 37, 196);
+    }
+
+    .linkedin:hover{
+        cursor: pointer;
+        scale: 1.1;
+        color: rgb(40, 105, 190);
+    }
+    .github:hover{
+        cursor: pointer;
+        scale: 1.1;
+        color: rgb(20, 19, 22);
+    }
+
+    .instagram:hover{
+        cursor: pointer;
+        scale: 1.1;
+        color: rgb(139, 16, 82);
+    }
+
+    .contact{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+        top: 2rem;
+    }
+    </style>
+</head>
+<body>
+    <div class="back"></div>
+    <div class="card">
+        <div class="img"></div>
+        <div class="name">Gagan Rai</div>
+        <div class="moredetail">
+            Ultimately, traveling is about creating memories and experiences that last a lifetime. Whether it's bonding with nature with loved ones over shared adventures, forging new friendships with fellow travelers, or simply savoring the joy of exploring new places and cultures, the moments we collect along our travels become cherished treasures that we carry with us long after the journey is over.  
+        </div>
+        <div class="socialmedia">
+            <i class="fa-brands fa-instagram fa-2x links instagram"></i>
+            <i class="fa-brands fa-facebook fa-2x links facebook"></i>
+            <i class="fa-brands fa-linkedin fa-2x links linkedin"></i>
+            <i class="fa-brands fa-github fa-2x links github"></i>
+        </div>
+        <div class="contact">
+            <span class="email">gagan@gmail.com</span>
+            <span class="phone">+977 9812345678</span>
+        </div>
+    </div>
+</body>
+</html>
